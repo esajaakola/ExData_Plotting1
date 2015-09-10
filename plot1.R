@@ -6,12 +6,12 @@
 
 plot1 <- function() {
     ## Download data package
-##    if(!file.exists("./data")) {
-##        dir.create("./data")
-##    }
-##    fileUrl <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
-##    download.file(fileUrl, destfile="./data/power.zip", method="curl")
-##    unzip("./data/power.zip", exdir="./data")
+    if(!file.exists("./data")) {
+        dir.create("./data")
+    }
+    fileUrl <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
+    download.file(fileUrl, destfile="./data/power.zip", method="curl")
+    unzip("./data/power.zip", exdir="./data")
     
     ## Read data
     data <- read.table("./data/household_power_consumption.txt", header = TRUE, sep=";", as.is = TRUE, na.strings="?")
